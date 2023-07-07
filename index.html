@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+  <style>
+    /* CSS styles for calculator layout */
+    .calculator {
+      width: 300px;
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 0 auto;
+    }
+    
+    .calculator input[type="text"] {
+      width: 100%;
+      height: 40px;
+      font-size: 20px;
+      text-align: right;
+      margin-bottom: 10px;
+    }
+    
+    .calculator button {
+      width: 70px;
+      height: 50px;
+      font-size: 20px;
+      margin: 5px;
+    }
+    #q{ 
+    width: 153px;
+      height: 50px;
+ }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="display" readonly>
+    <button onclick="appendOperator('/')">/</button>
+    <button onclick="appendOperator('+')">+</button>
+    <button onclick="appendOperator('-')">-</button>
+    <button onclick="appendNumber(1)">1</button>
+    <button onclick="appendNumber(2)">2</button>
+    <button onclick="appendOperator('*')">*</button>
+    <button onclick="appendNumber(3)">3</button>
+    <button onclick="appendNumber(4)">4</button>
+    <button onclick="appendOperator('.')">.</button>
+    <button onclick="appendNumber(5)">5</button>
+
+    <button onclick="appendNumber(6)">6</button>
+    <button onclick="appendNumber(7)">7</button>
+    <button onclick="appendNumber(8)">8</button>
+    
+    <button onclick="appendNumber(9)">9</button>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <button onclick="appendNumber(0)">0</button>
+    
+    <button id="q" onclick="calculate()">=</button>
+    
+    <button onclick="clearDisplay()">C</button>
+  </div>
+
+  <script>
+ 
+    function clearDisplay() {
+      document.getElementById('display').value = '';
+    }
+    
+    function appendNumber(number) {
+      document.getElementById('display').value += number;
+    }
+    
+    function appendOperator(operator) {
+      document.getElementById('display').value += operator;
+    }
+    
+    function calculate() {
+      let expression = document.getElementById('display').value;
+      let result = eval(expression);
+      document.getElementById('display').value = result;
+    
+      if (expression.includes('69')) {
+        document.getElementById('display').value = 'why are u gay';
+      }
+    }
+  </script>
+</body>
+</html>
