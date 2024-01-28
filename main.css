@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+body{
+    @apply m-6 bg-body text-white
+}
+.calculator{
+    @apply p-3 bg-mini rounded-lg
+}
+#display{
+    width: 300px;
+    @apply rounded-lg px-4 h-16 mb-4 text-body text-right
+}
+button{
+    @apply bg-body w-16 h-16 rounded-lg mb-3 mx-1
+}
+#q{
+    width: 293px;
+    @apply bg-plus text-2xl mb-0
+}
+.name{
+    @apply flex w-full justify-center mt-5 text-2xl font-bold
+}

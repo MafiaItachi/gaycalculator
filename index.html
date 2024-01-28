@@ -6,25 +6,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="tw_style.css">
     <style>
-  
+  /* body{
+    height: 100vh;
+    width: 100vw;
+    margin: 10px;
+  }
     body, h1, h2, h3, p, ul, li {
-      margin: 0;
+     
       padding: 0;
+
     }
     
-    /* Calculator container */
+
     .calculator {
-      width: 320px;
-      margin: 0 auto;
-      padding: 20px;
+      
+      height: 80%;
+      width: 98%;
       border: 1px solid #ccc;
       background-color: #f2f2f2;
     }
-    
-    /* Display input */
+
     .calculator input[type="text"] {
-      width: 100%;
+      
       height: 50px;
       font-size: 24px;
       text-align: right;
@@ -33,9 +40,10 @@
       border-radius: 5px;
       padding: 5px 10px;
       box-sizing: border-box;
+      margin: 5px;
     }
     
-    /* Calculator buttons */
+
     .calculator button {
       width: 70px;
       height: 70px;
@@ -52,7 +60,7 @@
       background-color: #ddd;
     }
     
-    /* Equal button */
+
     #q {
       width: 153px;
       background-color: #ff9800;
@@ -61,28 +69,8 @@
     
     #q:hover {
       background-color: #f57c00;
-    }
-    @media screen and (max-width: 480px) {
-      .calculator {
-        width: 100%;
-        padding: 10px;
-      }
-      
-      .calculator input[type="text"] {
-        font-size: 18px;
-      }
-      
-      .calculator button {
-        width: 60px;
-        height: 60px;
-        font-size: 18px;
-      }
-      
-      #q {
-        width: 100%;
-        margin-top: 10px;
-      }
-    }
+    } */
+
   </style>
 </head>
 <body>
@@ -92,19 +80,18 @@
     <button onclick="appendOperator('/')">/</button>
     <button onclick="appendOperator('+')">+</button>
     <button onclick="appendOperator('-')">-</button>
-    <button onclick="appendNumber(1)">1</button>
-    <button onclick="appendNumber(2)">2</button>
-    <button onclick="appendOperator('*')">*</button>
-    <button onclick="appendNumber(3)">3</button>
-    <button onclick="appendNumber(4)">4</button>
-    <button onclick="appendOperator('.')">.</button>
-    <button onclick="appendNumber(5)">5</button>
-
-    <button onclick="appendNumber(6)">6</button>
+    <button onclick="clearDisplay()">C</button>
     <button onclick="appendNumber(7)">7</button>
     <button onclick="appendNumber(8)">8</button>
-    
     <button onclick="appendNumber(9)">9</button>
+    <button onclick="appendOperator('*')">x</button>
+    <button onclick="appendNumber(4)">4</button>
+    <button onclick="appendNumber(5)">5</button>
+    <button onclick="appendNumber(6)">6</button>
+    <button onclick="appendOperator('.')">.</button>
+    <button onclick="appendNumber(3)">3</button>
+    <button onclick="appendNumber(2)">2</button>
+    <button onclick="appendNumber(1)">1</button>
     
     
     
@@ -118,10 +105,10 @@
     
     <button id="q" onclick="calculate()">=</button>
     
-    <button onclick="clearDisplay()">C</button>
+
 
   </div>
-  
+   <div class="name">MADE BY SHUBHAM</div>
   <!-- JavaScript code here -->
   <script>
  
